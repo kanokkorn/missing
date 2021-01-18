@@ -2,6 +2,14 @@
 
 For my configuration [see here](https://github.com/kanokkorn/config/blob/master/.vimrc)
 
+## Open file in new tab
+
+Open file in new tab
+
+```vim
+:tabnew filename
+```
+
 ## Show/Hide number
 
 default vim doesn't show number
@@ -33,6 +41,15 @@ press ```tab``` to scroll through available colors
 ```vim
 :set noet|retab!
 ```
+
+## Autocomplete
+
+press ```ctrl``` + ```n``` for autocomplete if you typed that word before
+
+## File finder
+
+press ```ctrl``` + ```x``` and ```ctrl``` + ```f``` for insert file name
+
 
 ## Terminal
 
