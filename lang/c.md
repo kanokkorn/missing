@@ -28,6 +28,8 @@ Like ternary ops but with expression 1 evaluted once
 expression 1 ?: expression 2;
 ```
 
+## String Token
+
 ## Scanset
 
 Accept only characters mentioned in scanset. For example 

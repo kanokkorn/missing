@@ -15,13 +15,13 @@ Open file in new tab
 default vim doesn't show number
 
 ```vim
-set number
+:set number
 ```
 
 or if not want to
 
 ```vim
-set nonumber
+:set nonumber
 ```
 
 ## Change Colorscheme
@@ -32,11 +32,11 @@ Default colors can be quite hard to read. To change colors
 :colo
 ```
 
-press ```tab``` to scroll through available colors
+Press ```tab``` to scroll through available colors
 
 ## Convert space to tab
 
- what if some program want tab and not space like [makefile](./make.md)
+What if some program want tab and not space like [makefile](./make.md)
 
 ```vim
 :set noet|retab!
@@ -44,16 +44,16 @@ press ```tab``` to scroll through available colors
 
 ## Autocomplete
 
-press ```ctrl``` + ```n``` for autocomplete if you typed that word before
+Press ```ctrl``` + ```n``` for autocomplete if you typed that word before
 
 ## File finder
 
-press ```ctrl``` + ```x``` and ```ctrl``` + ```f``` for insert file name
+Press ```ctrl``` + ```x``` and ```ctrl``` + ```f``` for insert file name
 
 
 ## Terminal
 
-open terminal inside vim 
+Open terminal inside vim 
 
 ```vim
 :term
@@ -83,16 +83,16 @@ for verticle
 
 ### Tree view
 
-use tree view instead of default view
+Use tree view instead of default view
 
 ```vim
-let g:netrw_liststyle = 3
+:let g:netrw_liststyle = 3
 ```
 
 ### Disable banner
 
-disable netrw banner if you don't want it
+Disable netrw banner if you don't want it
 
 ```vim
-let g:netrw_banner = 0
+:let g:netrw_banner = 0
 ```
