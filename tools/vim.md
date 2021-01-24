@@ -2,6 +2,10 @@
 
 For my configuration [see here](https://github.com/kanokkorn/config/blob/master/.vimrc)
 
+## Fix indent
+
+typing ```gg=G``` to fix indent whole file  
+
 ## Open file in new tab
 
 Open file in new tab
