@@ -1,5 +1,36 @@
 # C/C++
 
+## Type casting
+
+Convert from one type to another type
+
+```c
+(type) expression
+```
+
+For example, casting int to float
+
+```c
+int x = 1;
+x = (float) x;
+```
+
+## Comma Ops
+
+both statements are evaluated, but only last statement return value
+
+```c
+int x = (printf("the value is"), getValue());
+```
+
+For-loop example
+
+```c
+for (int x = 0; x < 10; x++, random_func()) {
+  // do something after random_func
+}
+```
+
 ## Ternary Ops
 
 Same as if-else statement but shorter and only supported 1 condition
@@ -27,8 +58,6 @@ Like ternary ops but with expression 1 evaluted once
 ```c
 expression 1 ?: expression 2;
 ```
-
-## String Token
 
 ## Scanset
 
