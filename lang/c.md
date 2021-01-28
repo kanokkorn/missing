@@ -107,3 +107,47 @@ switch(x) {
 ```
 
 ## Designated Array Initializer
+
+Can be mapping ```enum``` or assign value in array 
+
+For assign value
+
+```c
+int x[6] = { [2] = 31, [5] = 54};
+int x[6] = { 0, 0, 31, 0, 0, 54};
+```
+
+For mapping ```enum```
+
+```c
+enum color {
+  black,
+  green,
+  white,
+}
+```
+
+Value in ```[]``` will map to other array
+
+```c
+constexpr uint32_t color_value[] = {
+  [black] = 0x000000,
+  [white] = 0xffffff,
+  [green] = 0x00ff00,
+}
+```
+
+## Computed goto
+
+Alternative to switch-case, can increase loop speed up to 15% ~ 30% but also increase codebase
+
+This trick depends on CPU architecture/branch prediction it may not speed up all case
+
+```c
+void func(void) {
+  void* p = &&label;
+  goto* p;
+label:
+  return;
+}
+```
