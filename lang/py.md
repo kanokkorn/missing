@@ -1,5 +1,49 @@
 # Python3
 
+## slice ops
+
+Iterate over list with 2 increments
+
+```py
+x = [1, 2, 3, 4, 5]
+x[::2]
+[1, 3, 5]
+```
+
+Reverse list
+
+```py
+x[::-1]
+[5, 4, 3, 2, 1]
+```
+
+## enumerate
+
+Wrap an iterable with enumerate
+
+```py
+x = ['a', 'b', 'c']
+for index, item in enumerate(x):
+  print(index, item)
+```
+
+result will be
+
+```py
+0 a
+1 b
+2 c
+```
+
+## Value swapping
+
+swapping between 2 variables
+
+```py
+x, y = 1, 2
+y, x = x, y
+```
+
 ## Decorators
 
 Function inside functions
