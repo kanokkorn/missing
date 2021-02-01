@@ -1,5 +1,46 @@
 # C/C++
 
+## Void pointer
+
+Void pointer can hold address of any type and can be typecasted to any type
+
+Can be used to allocate memory of any data type because of void
+
+**Void pointer can't dereferenced**
+
+For example
+
+```c
+int x = 10;
+void *p = &x;
+```
+
+Malloc with typecast
+
+```c
+int *x = malloc(sizeof(int) *n);
+```
+
+## Function pointer
+
+Pointer point to function. Can be use in place of switch-case
+
+Unlike normal pointer, don't allocate memory with function pointer
+
+Example of Function pointer
+
+```c
+void function(int x) {
+  print("%d\n", x);
+}
+
+int main(void) {
+  void (*function)(int) = &function;
+  (*function)(10);
+  return 0;
+}
+```
+
 ## Type casting
 
 Convert from one type to another type
