@@ -6,9 +6,7 @@ Void pointer can hold address of any type and can be typecasted to any type
 
 Can be used to allocate memory of any data type because of void
 
-**Void pointer can't dereferenced**
-
-For example
+Unlike normal pointer **Void pointer can't dereferenced**
 
 ```c
 int x = 10;
@@ -49,7 +47,7 @@ Convert from one type to another type
 (type) expression
 ```
 
-For example, casting int to float
+casting int to float
 
 ```c
 int x = 1;
@@ -64,7 +62,7 @@ both statements are evaluated, but only last statement return value
 int x = (printf("the value is"), getValue());
 ```
 
-For-loop example
+For-loop example:
 
 ```c
 for (int x = 0; x < 10; x++, random_func()) {
@@ -102,7 +100,7 @@ expression 1 ?: expression 2;
 
 ## Scanset
 
-Accept only characters mentioned in scanset. For example 
+Accept only characters mentioned in scanset
 
 ```c
 scanf("%[0-9]s", x);
@@ -120,15 +118,13 @@ In this case, if uppercase s is found scanf will stop
 
 ## Case range
 
-Switch-case with iterate number can be tedious to write 
-
-For example
+Switch-case with iterate number can be tedious to write
 
 ```cpp
 switch(x){
   case 0:
     // do something
-    ... 
+    ...
   case 9:
     // do something
   default:
@@ -149,7 +145,7 @@ switch(x) {
 
 ## Designated Array Initializer
 
-Can be mapping ```enum``` or assign value in array 
+Can be mapping ```enum``` or assign value in array
 
 For assign value
 
