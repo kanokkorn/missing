@@ -2,9 +2,17 @@
 
 For my configuration [see here](https://github.com/kanokkorn/config/blob/master/.vimrc)
 
+## Remove unwated spaces
+
+deletes any trailing whitespace at the end of each line
+
+```vim
+:%s/\s\+%//e
+```
+
 ## Fix indent
 
-typing ```gg=G``` to fix indent whole file  
+typing ```gg=G``` to fix indent whole file
 
 ## Open file in new tab
 
@@ -57,7 +65,7 @@ Press ```ctrl``` + ```x``` and ```ctrl``` + ```f``` for insert file name
 
 ## Terminal
 
-Open terminal inside vim 
+Open terminal inside vim
 
 ```vim
 :term
