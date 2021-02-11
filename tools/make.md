@@ -29,8 +29,17 @@ run make with all available threads
 make -j`nproc`
 ```
 
+for shorter version
+
+```sh
+make -j
+```
+
 just print without run
 
 ```sh
 make -n
 ```
+
+## Syntax
+
