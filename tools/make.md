@@ -49,4 +49,3 @@ make -n
 ```
 
 ## Syntax
-
