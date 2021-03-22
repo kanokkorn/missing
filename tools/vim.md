@@ -2,6 +2,31 @@
 
 For my configuration [see here](https://github.com/kanokkorn/config/blob/master/.vimrc)
 
+## Iterate number
+
+Iterate number using vim
+
+```text
+0
+0
+0
+0
+0
+0
+```
+
+use ``` g ``` and ``` ctrl+a ``` after visual block highlight all number
+
+result will look like this
+
+```text
+1
+2
+3
+4
+5
+```
+
 ## Remove unwated spaces
 
 deletes any trailing whitespace at the end of each line
