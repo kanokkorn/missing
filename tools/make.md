@@ -8,15 +8,22 @@ Hello world project as example
 
 ```makefile
 # comment look like this
-cc = gcc  # compiler
-ld = -lm  # link directories
-cflag = -std=c99 -Wall -Wextra -Ofast
-project_name = hello_world
+CC = cc  # compiler
+LIBS = -lm  # link directories
+CFLAGS = -std=c89 -Wall -Wextra -Ofast -pedantic
+PROJECT_NAME = hello_world
 
-$(project_name): main.c
-  $(cc) main.c $(cflags) $(ld) -o $(project_name)
+DEBUG = 0
+
+# condition example, set DEBUG to 1 is equivalent to #define DEBUG
+ifeq ($(TEST), 1)
+  CFLAGS += -DTEST
+endif
+
+$(PROJECT_NAME): main.c
+  $(CC) $(CFLAGS) $(LIBS) $< -o $@
 clean:
-  rm $(project_name)
+  rm $(PROJECT_NAME)
 
 .SILENT: clean  # silent them if don't want to print out
 ```
