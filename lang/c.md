@@ -1,5 +1,43 @@
 # C/C++
 
+## Struct pointer
+
+sturct with pointers
+
+```c
+typedef struct {
+  int x;
+  int y;
+  int z;
+}value;
+```
+
+struct as function arguments
+
+```c
+void _xyz(value * val, int x, int y, int z) {
+  val->x = x;
+  val->y = y;
+  val->z = z;
+}
+```
+
+in main function
+
+```c
+/* declare function */
+void _xyz(value * val, int, int, int);
+
+int main(void) {
+  value *val = malloc(sizeof(value));
+  int x_input = 2;
+  int y_input = 3;
+  int z_input = 4;
+  _xyz(val, x_input, y_input, z_input);
+  return 0;
+}
+```
+
 ## Void pointer
 
 Void pointer can hold address of any type and can be typecasted to any type
