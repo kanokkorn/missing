@@ -100,3 +100,44 @@ Example above can be written with Assignment Expression as
 while x := does.something()
   return value
 ```
+
+## Virtual Environment
+
+Virtual environment made python3 package management more easy, highly recommend when developing program that have lot of packages.
+
+Get start with following command
+
+```sh
+python3 -m venv <path-to-project-folder>
+```
+
+In project folder will have something like
+
+```sh
+$ ls -lh
+total 20K
+drwxrwxr-x 2 user user 4.0K Jul 27 12:59 bin
+drwxrwxr-x 2 user user 4.0K Jul 27 12:59 include
+drwxrwxr-x 3 user user 4.0K Jul 27 12:59 lib
+lrwxrwxrwx 1 user user    3 Jul 27 12:59 lib64 -> lib
+-rw-rw-r-- 1 user user   70 Jul 27 12:59 pyvenv.cfg
+drwxrwxr-x 3 user user 4.0K Jul 27 12:59 share
+```
+
+To activate virtual environment, run
+
+```sh
+source ./bin/activate
+```
+
+If virtual environment activated sucessfully will see indicate in path for example
+
+```sh
+(my-project) user@localhost:~/my-project$ 
+```
+
+Once finished or wanted to quit, to deactivate run following command
+
+```sh
+deactivate
+```
