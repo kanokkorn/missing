@@ -10,6 +10,8 @@ Something I don't know
 
 - [Python](./lang/py.md)
 
+- [VHDL](./lang/vhd.md)
+
 ### Tools
 
 - [Makefile](./tools/make.md)
@@ -17,3 +19,5 @@ Something I don't know
 - [CMake](./tools/cmake.md)
 
 - [Vim](./tools/vim.md)
+
+- [Git](./tools/git.md)
