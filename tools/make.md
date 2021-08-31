@@ -7,11 +7,17 @@ Build automation tools, very simple and come with most linux distribution
 Hello world project as example
 
 ```makefile
-# comment look like this
-CC = cc  # compiler
-LIBS = -lm  # link directories
-CFLAGS = -std=c89 -Wall -Wextra -Ofast -pedantic
-PROJECT_NAME = hello_world
+# makefile 
+cc = cc                                   # compiler
+libs = -lm                                # libraries
+cflags = -std=c89 -Wall -Wextra -Werror\
+         -Wconversion -Wshadow-Ofast\
+         -pedantic                        # compiler flags
+ld = -fuse-ld=ld                          # linker flags
+
+bin = hello_world
+src = $(wildcard *.c)                     # search for all .c files
+obj = $(patsubst %.c, %.o, $(src))        # convert .c to .o files
 
 DEBUG = 0
 
@@ -20,12 +26,20 @@ ifeq ($(TEST), 1)
   CFLAGS += -DTEST
 endif
 
-$(PROJECT_NAME): main.c
-  $(CC) $(CFLAGS) $(LIBS) $< -o $@
-clean:
-  rm $(PROJECT_NAME)
+# make sequence
+all : $(obj) $(bin)
+# repeating prevention
+.PHONY: all clean                         
 
-.SILENT: clean  # silent them if don't want to print out
+$(obj) : $(src)
+  $(cc) $(cflags) $^ -c
+$(bin) : $(obj)
+  $(cc) $(ld) $^ -o $@ $(libs)
+clean :
+  $(RM) *.o $(bin)
+
+# silent them if don't want to print out
+.SILENT: clean  
 ```
 
 ## Flags
