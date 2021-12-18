@@ -1,6 +1,6 @@
 # missing
 
-Something I don't know
+Collection of things I learned recently
 
 ## Contents
 
