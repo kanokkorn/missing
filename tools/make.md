@@ -44,22 +44,31 @@ clean :
 
 ## Flags
 
-run make with all available threads
+Flags that use in make
 
-```sh
-make -j`nproc`
-```
+### Common use flags
 
-for shorter version
+- ```-j``` allow jobs, for example ```-j4``` will spawn 4 jobs to work simultaneous ,require some memory
 
-```sh
-make -j
-```
+- ```-n``` Don't actually run, just print
 
-just print without run
-
-```sh
-make -n
-```
 
 ## Syntax
+
+Syntax use in makefile
+
+### Wildcard
+
+Get name of everything, usually use with extension like ```*.c``` or ```*.cpp``` to grab a name of files with that extension
+
+```makefile
+$(wildcard pattern)
+```
+
+### Path substitution
+
+Performs a textual replacement on the text 
+
+```makefile
+$(patsubst pattern, replacement, text)
+```
