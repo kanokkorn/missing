@@ -50,7 +50,7 @@ Flags that use in make
 
 - ```-j``` allow jobs, for example ```-j4``` will spawn 4 jobs to work simultaneous ,require some memory
 
-- ```-n``` Don't actually run, just print
+- ```-n``` not actually run, just print
 
 
 ## Syntax
@@ -71,4 +71,16 @@ Performs a textual replacement on the text
 
 ```makefile
 $(patsubst pattern, replacement, text)
+```
+
+useful for rename multiple files, like source files to object files for example
+
+```makefile
+obj = $(patsubst %.c, %.o, $(src))
+```
+
+Alternatively, this shorter version will output same result as ```patsubst```
+
+```makefile
+obj = $(src:.c=.o)
 ```
