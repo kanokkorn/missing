@@ -1,6 +1,6 @@
 # Makefile
 
-Build automation tools, very simple and come with most linux distribution
+Build automation file used by GNU Make, very simple and can be install in most linux distribution
 
 ## Template
 
@@ -8,16 +8,16 @@ Hello world project as example
 
 ```makefile
 # makefile 
-cc = cc                                   # compiler
-libs = -lm                                # libraries
-cflags = -std=c89 -Wall -Wextra -Werror\
+CC = cc                                   # compiler
+LDLIBS = -lm                              # libraries
+CFLAGS = -std=c89 -Wall -Wextra -Werror\
          -Wconversion -Wshadow-Ofast\
          -pedantic                        # compiler flags
-ld = -fuse-ld=ld                          # linker flags
+LD = -fuse-ld=ld                          # linker flags
 
-bin = hello_world
-src = $(wildcard *.c)                     # search for all .c files
-obj = $(patsubst %.c, %.o, $(src))        # convert .c to .o files
+BIN = hello_world
+SRC = $(wildcard *.c)                     # search for all .c files
+OBJ = $(patsubst %.c, %.o, $(SRC))        # convert .c to .o files
 
 DEBUG = 0
 
@@ -27,16 +27,16 @@ ifeq ($(TEST), 1)
 endif
 
 # make sequence
-all : $(obj) $(bin)
+all : $(OBJ) $(BIN)
 # repeating prevention
 .PHONY: all clean                         
 
-$(obj) : $(src)
-  $(cc) $(cflags) $^ -c
-$(bin) : $(obj)
-  $(cc) $(ld) $^ -o $@ $(libs)
+$(OBJ): $(SRC)
+  $(CC) $(CFLAGS) $^ -c
+$(BIN): $(OBJ)
+  $(CC) $(LD) $^ -o $@ $(LDLIBS)
 clean :
-  $(RM) *.o $(bin)
+  $(RM) *.o $(BIN)
 
 # silent them if don't want to print out
 .SILENT: clean  
@@ -76,11 +76,11 @@ $(patsubst pattern, replacement, text)
 useful for rename multiple files, like source files to object files for example
 
 ```makefile
-obj = $(patsubst %.c, %.o, $(src))
+OBJ = $(patsubst %.c, %.o, $(SRC))
 ```
 
 Alternatively, this shorter version will output same result as ```patsubst```
 
 ```makefile
-obj = $(src:.c=.o)
+OBJ = $(SRC:.c=.o)
 ```
