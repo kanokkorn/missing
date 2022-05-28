@@ -1,6 +1,6 @@
-# Makefile
+# GNU Make or gmake
 
-Build automation file used by GNU Make, very simple and can be install in most linux distribution
+Example of GNU makefile
 
 ## Template
 
@@ -13,11 +13,11 @@ LDLIBS = -lm                              # libraries
 CFLAGS = -std=c89 -Wall -Wextra -Werror\
          -Wconversion -Wshadow-Ofast\
          -pedantic                        # compiler flags
-LD = -fuse-ld=ld                          # linker flags
+LDFLAGS = -fuse-ld=ld                     # linker flags
 
 BIN = hello_world
-SRC = $(wildcard *.c)                     # search for all .c files
-OBJ = $(patsubst %.c, %.o, $(SRC))        # convert .c to .o files
+SRC = $(wildcard *.c)                     # look for all .c files
+OBJ = $(patsubst %.c, %.o, $(SRC))        # rename .c to .o files
 
 DEBUG = 0
 
