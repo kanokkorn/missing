@@ -14,10 +14,12 @@ Collection of things I learned recently
 
 ### Tools
 
-- [Makefile](./tools/make.md)
+- [gmake](./tools/gmake.md)
 
-- [CMake](./tools/cmake.md)
+- [bmake](./tools/bmake.md)
 
-- [Vim](./tools/vim.md)
+- [cmake](./tools/cmake.md)
 
-- [Git](./tools/git.md)
+- [vim](./tools/vim.md)
+
+- [git](./tools/git.md)
