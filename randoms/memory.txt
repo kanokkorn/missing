@@ -1,0 +1,42 @@
+Memory
+------
+
+ELIM5 for computer memory from application to silicon 
+
+words
+-----
+
+virtual address space  (vas)	fake address for application, processes
+memory management unit (mmu)	Part of CPU, mapping virtual address space to a physical memory (RAM, disk)
+
+
+virtual address space
+---------------------
+
+a fake memory adress for application data section for whatever data is, like parameters, function ... etc 
+
+why fake address ? imagine a silly program that does nothing but a memory allocation. that could crash entire system.
+vas prevent that by provide them fake memory address, so they can have many address as they wanted
+
+           0                                           4 GiB
+VAS        |---vvv--------vvvvvv---vvvv----vv---v----vvv--|
+mapping        |||        ||||||   ||||    ||   |    |||
+file bytes     app        kernel   user   system_page_file
+
+		example of vas with 4 GiB of RAM
+
+when vas know there's an actual data in the address, 
+
+
+translate from virtual to physical
+----------------------------------
+
+Things to know before translate is
+
+- Page size
+- bits of virtual address
+
+In this example: 16-bit system, 4KB page size and physical memory size is 64KB.
+
+log2(page_size) -> log2(4096) = 12 bit offset
+
